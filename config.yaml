@@ -1,0 +1,31 @@
+# ===========================
+# Pine Script Daily Trading Strategy
+# Default Parameter Configuration
+# ===========================
+
+# ---- Moving Average Settings ----
+short_ma_length: 9        # Short-term moving average period
+long_ma_length: 21        # Long-term moving average period
+
+# ---- ATR (Average True Range) Settings ----
+atr_period: 14            # ATR calculation period
+atr_multiplier: 1.5       # Multiplier for ATR-based trailing stop loss
+
+# ---- Risk Management ----
+stop_loss_percent: 1.5    # Fixed stop loss percentage
+take_profit_percent: 3.0  # Fixed take profit percentage
+
+# ---- Trading Session Settings ----
+session_start: "09:15"    # Market open time (IST)
+session_end: "15:30"      # Market close time (IST)
+close_positions_end_of_day: true  # Exit all positions before market close
+
+# ---- Alerts ----
+enable_alerts: true       # Enable/disable alert notifications
+alert_on_signal: true     # Trigger alert on signal candle close
+alert_on_stop_loss: true  # Trigger alert when SL is hit
+alert_on_take_profit: true # Trigger alert when TP is hit
+
+# ---- Backtesting ----
+backtest_start_date: "2024-01-01"  # Start date for historical data testing
+backtest_end_date: "2024-08-14"    # End date for historical data testing
